@@ -1,4 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
+import './TodoList.scss';
 import {TodoContext} from "../../contexts/TodoContext";
 import {
     Button,
@@ -29,7 +30,7 @@ const TodoList = () => {
     };
 
     return (
-        <div className={"u-align--center"}>
+        <div id={"todo-list"} className={"u-align--center"}>
             {addingItem &&
                 <Modal
                     title={"Add item"}
@@ -89,6 +90,7 @@ const TodoList = () => {
             }
             {items.size ?
                 <MainTable
+                    id={"todo-table"}
                     headers={[{content: "Task"}, {content: "Priority"}, {content: "Delete"}]}
                     rows={[...items].map(
                         itemPair =>

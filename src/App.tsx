@@ -37,14 +37,14 @@ function App() {
   };
 
   return (
-      <>
+      <div id={"app"}>
         <TodoContext.Provider value={{
           items, addItem, removeItem, addingItem, setAddingItem
         }}>
           <Header/>
           <TodoList/>
         </TodoContext.Provider>
-      </>
+      </div>
   );
 }
 

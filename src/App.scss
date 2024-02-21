@@ -1,2 +1,8 @@
 @import "vanilla-framework";
 @include vanilla;
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
